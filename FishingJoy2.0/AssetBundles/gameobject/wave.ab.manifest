@@ -1,0 +1,42 @@
+ManifestFileVersion: 0
+CRC: 119356447
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 90469bdaa3bf1ad48161f0d2ded076a8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: a938056ea6dd4ffb0eca12cadf05186b
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: c10bfafdcbb2aa649a96148e5f56f63e, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Prefebs/Item/SeaWave.prefab
+Dependencies: []

@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 2636519246
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: gameobject/enemy.ab
+      Dependencies: {}
+    Info_1:
+      Name: gameobject/wave.ab
+      Dependencies: {}
