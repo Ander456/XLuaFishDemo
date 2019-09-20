@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using XLua;
 using System.IO;
+using UnityEngine.Networking;
 
 public class HotFixScript : MonoBehaviour
 {
@@ -45,9 +46,16 @@ public class HotFixScript : MonoBehaviour
     }
 
     [LuaCallCSharp]
-    public static void LoadResource(string resName, string filePath)
+    public void LoadResource(string resName, string filePath)
     {
-        AssetBundle ab = AssetBundle.LoadFromFile(@"/Users/Alex/Desktop/XluaProjects/FishingJoy/AssetBundle/" + filePath);
+        StartCoroutine(LoadResourceCoroutine(resName, filePath));
+    }
+
+    IEnumerator LoadResourceCoroutine(string resName, string filePath)
+    {
+        UnityWebRequest request = UnityWebRequestAssetBundle.GetAssetBundle(@"http://localhost:8080/AssetBundle/" + filePath);
+        yield return request.SendWebRequest();
+        AssetBundle ab = (request.downloadHandler as DownloadHandlerAssetBundle).assetBundle;
         GameObject gameObject = ab.LoadAsset<GameObject>(resName);
         prefabDict.Add(resName, gameObject);
     }

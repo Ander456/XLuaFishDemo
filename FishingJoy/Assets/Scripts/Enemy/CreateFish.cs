@@ -17,6 +17,7 @@ public class CreateFish : MonoBehaviour
     public GameObject boss3;
     public Transform[] CreateFishPlace;
 
+    public HotFixScript hotFixScript;
 
     private float ItemtimeVal = 0;//游戏物体计时器
     private float createManyFish;
