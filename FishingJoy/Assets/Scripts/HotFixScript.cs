@@ -8,12 +8,18 @@ public class HotFixScript : MonoBehaviour
 {
 
     private LuaEnv luaEnv;
-    // Start is called before the first frame update
-    void Start()
+
+    public static Dictionary<string, GameObject> prefabDict = new Dictionary<string, GameObject>();
+
+    private void Awake()
     {
         luaEnv = new LuaEnv();
         luaEnv.AddLoader(MyLoader);
         luaEnv.DoString("require 'fish'");
+    }
+    void Start()
+    {
+
     }
 
     // Update is called once per frame
@@ -36,5 +42,19 @@ public class HotFixScript : MonoBehaviour
     private void OnDestroy()
     {
         luaEnv.Dispose();
+    }
+
+    [LuaCallCSharp]
+    public static void LoadResource(string resName, string filePath)
+    {
+        AssetBundle ab = AssetBundle.LoadFromFile(@"/Users/Alex/Desktop/XluaProjects/FishingJoy/AssetBundle/" + filePath);
+        GameObject gameObject = ab.LoadAsset<GameObject>(resName);
+        prefabDict.Add(resName, gameObject);
+    }
+
+    [LuaCallCSharp]
+    public static GameObject GetGameObject(string goName)
+    {
+        return prefabDict[goName];
     }
 }

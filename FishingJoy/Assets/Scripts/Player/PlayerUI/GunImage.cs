@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using XLua;
 /// <summary>
 /// 负责UI显示的枪
 /// </summary>
+[Hotfix]
 public class GunImage : MonoBehaviour
 {
 
@@ -63,7 +65,7 @@ public class GunImage : MonoBehaviour
 
     }
     //旋转枪
-
+    [LuaCallCSharp]
     private void RotateGun()
     {
 

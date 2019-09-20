@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using XLua;
 /// <summary>
 /// 产鱼器
 /// </summary>
-
+[Hotfix]
 public class CreateFish : MonoBehaviour
 {
 
@@ -42,7 +42,7 @@ public class CreateFish : MonoBehaviour
 
 
     }
-
+    [LuaCallCSharp]
     void Update()
     {
 

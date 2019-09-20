@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using XLua;
 /// <summary>
 /// 散弹按钮
 /// </summary>
+[Hotfix]
 public class ButterFly : MonoBehaviour
 {
 

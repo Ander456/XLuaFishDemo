@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using XLua;
 /// <summary>
 /// 灼烧
 /// </summary>
+[Hotfix]
 public class Fire : MonoBehaviour
 {
 

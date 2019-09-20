@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\Enemy\Fish.cs" />
      <Compile Include="Assets\Scripts\Enemy\InvisibleBoss.cs" />
      <Compile Include="Assets\Scripts\Enemy\Qipao.cs" />
+     <Compile Include="Assets\Scripts\HotFixEmpty.cs" />
      <Compile Include="Assets\Scripts\HotFixScript.cs" />
      <Compile Include="Assets\Scripts\Item\Card.cs" />
      <Compile Include="Assets\Scripts\Item\FishNet.cs" />
